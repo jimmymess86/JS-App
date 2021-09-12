@@ -5,6 +5,7 @@ let pokemonList = [
 ]
 
 // a for loop is added below to list the pokemon on the index.html
+// variables for pokemon Height and Name were created
 // a special line of code is added to display the largest pokemon (Wow that's big!)
 
 for (let i = 0; i < pokemonList.length; i++) {
