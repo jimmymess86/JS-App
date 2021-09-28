@@ -8,9 +8,10 @@ let pokemonList = [
 // variables for pokemon Height and Name were created
 // a special line of code is added to display the largest pokemon (Wow that's big!)
 
-for (let i = 0; i < pokemonList.length; i++) {
-  let pokemonName = pokemonList[i].name;
-  let pokemonHeight = pokemonList[i].height;
+// Use a forEach() function instead of the for loop you have to iterate over the Pokémon in your pokemonList array in order to print the details of each one
+pokemonList.forEach(function(pokemon) {
+  let pokemonName = pokemon.name;
+  let pokemonHeight = pokemon.height;
   if (pokemonHeight >= 1.7) {
       document.write(
       '<p>' +
