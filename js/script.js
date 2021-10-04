@@ -27,9 +27,34 @@ let pokemonList = [
     return pokemonList;
   }
 
+  function addListItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listPokemon = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listPokemon.appendChild(button);
+    pokemonList.appendChild(listPokemon);
+
+    addEventListener(button, pokemon);
+  }
+
+  function showDetails(pokemon) {
+    console.log(pokemon);
+    }
+
+  // addEventListener to the created button. 10.4.21
+
+  function addEventListener(button, pokemon) {
+    button.addEventListener('click', function() {
+      showDetails(pokemon.name);
+    });
+  }
+
   return {
     add: add,
-    getAll: getAll
+    getAll: getAll,
+    addListItem: addListItem
   };
 })();
 
@@ -39,23 +64,5 @@ let pokemonList = [
 // 10.1.21 pokemonRepository.getAll created to finish IIFE code
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-  let pokemonName = pokemon.name;
-  let pokemonHeight = pokemon.height;
-  if (pokemonHeight >= 1.7) {
-      document.write(
-      '<p>' +
-        pokemonName +
-        ' ' +
-        '(Height: ' +
-        pokemonHeight +
-        ')' +
-        " - Wow that's big!" +
-        '</p>'
-    );
-  } else {
-    document.write(
-      '<p>' + pokemonName + ' ' + '(Height: ' + pokemonHeight + ')' + '</p>'
-    );
-  }
-})
- 
+  pokemonRepository.addListItem(pokemon);
+});
