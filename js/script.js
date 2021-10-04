@@ -58,3 +58,4 @@ pokemonRepository.getAll().forEach(function(pokemon) {
     );
   }
 })
+ 
