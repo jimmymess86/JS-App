@@ -1,10 +1,14 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
+
   //url to fetch data of 150 pokemon
+
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   function add(pokemon) {
+
     // typeof created to display pokemon
+
     if (
       typeof pokemon === "object" &&
       "name" in pokemon
@@ -27,11 +31,15 @@ let pokemonRepository = (function () {
     button.classList.add("button-class");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
+
     // button modified to click and release pokemon info to console.
+
     button.addEventListener("click", function(event) {
       showDetails(pokemon);
     });
   }
+
+// showDetails moved above loadDetails for easier reading
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
@@ -40,6 +48,7 @@ let pokemonRepository = (function () {
   }
 
   //show modal function
+
   let modalContainer = document.querySelector('#modal-container');
 
   function showModal(pokemon) {
@@ -56,9 +65,10 @@ let pokemonRepository = (function () {
     titleElement.innerText = pokemon.name;
 
     let heightElement = document.createElement('p');
-    heightElement.innerText = 'Height:' + pokemon.height;
+    heightElement.innerText = 'Height:' + ' ' + pokemon.height;
 
     // created an array to store the type objects.
+
     let pokemonTypes = [];
     Object.keys(pokemon.types).forEach((key) => {
       pokemonTypes.push(pokemon.types[key].type.name);
@@ -91,8 +101,10 @@ let pokemonRepository = (function () {
     }
   });
   modalContainer.addEventListener('click', (e) => {
+
     // Since this is also triggered when clicking INSIDE the modal
     // We only want to close if the user clicks directly on the overlay
+    
     let target = e.target;
     if (target === modalContainer) {
       hideModal();
