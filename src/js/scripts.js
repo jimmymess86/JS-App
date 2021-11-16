@@ -97,7 +97,7 @@ let pokemonRepository = (function() {
 
     let typesElement = $("<p>" + "types : " + pokemonTypes + "</p>");
 
-    let imageElement = $("<img class=\"modal-img\" style=\"width:50%\">");
+    let imageElement = $("<img class='modal-img' style='width:50%'>");
     imageElement.attr("src", pokemon.imageUrl);
 
     modalTitle.append(nameElement);
@@ -124,8 +124,6 @@ let pokemonRepository = (function() {
       hideModal();
     }
   });
-
-  // Added functionality for "Search Pokemon" form
 
   let pokemonSearch = document.querySelector("#filter");
 

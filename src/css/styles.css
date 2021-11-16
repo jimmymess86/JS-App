@@ -1,0 +1,77 @@
+.pokemon-list {
+  margin-top: 35px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+li.group-list-item {
+  margin-bottom: 15px;
+}
+
+.button {
+  text-transform: capitalize;
+  font-size: 20px;
+  width: 200px;
+  margin: 5px;
+  border: none;
+}
+
+.btn-dark {
+  background-color: #000;
+}
+
+.btn-dark:hover {
+  background-color: #8b0000;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #000;
+}
+
+.modal-content {
+  margin-top: 5vh;
+}
+
+.modal-title {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.modal-header {
+  border-top: 4px solid #000;
+  border-left: 4px solid #000;
+  border-right: 4px solid #000;
+  border-bottom: 1px solid #000;
+  background-color: #8b0000;
+  padding: 5px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  border-left: 4px solid #000;
+  border-right: 4px solid #000;
+}
+
+.modal-img {
+  height: 175px;
+  width: 150px;
+  align-self: center;
+  padding: 0px;
+}
+
+.modal-footer {
+  border-top: 1px solid #000;
+  border-left: 4px solid #000;
+  border-right: 4px solid #000;
+  border-bottom: 4px solid #000;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
